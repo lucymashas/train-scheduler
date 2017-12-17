@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Train Scheduler</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <!-- jQuery -->
+ <!--  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery.js"> </script>
+  <script type="text/javascript" src="databse.js"></script> -->
+<style>
+
+.jumbotron{
+	background-color:#3681DC;
+	color:#FBFDFE;
+	text-align:center;
+}
+.panel > .panel-heading {
+    background-image: none;
+    background-color: #3E6897;
+    color: white;
+
+}
+
+</style>
+</head>
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="jumbotron">
+				<h2>
+					Train Scheduler
+				</h2>
+				<p>
+					All Aboard!! The Newark Express!!
+				</p>
+			</div> <!-- end Jumbotron -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						Current Train Schedule
+					</h3>
+				</div>
+
+				<div class="panel-body">
+					<table class="table table-striped">
+						<thead><tr>
+						<th>Train Name</th>
+						<th>Destination</th>
+						<th>Frequency (min)</th>
+						<th>Next Arrival</th>
+						<th>Minutes Away</th>
+						</thead></tr>
+					</table>
+				</div>
+
+			</div>  <!-- end train schedule panel -->
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						Add Train
+					</h3>
+				</div>
+				<div class="panel-body">
+					
+					<form>
+					  <div class="form-group">
+						<label for="trainName">Train Name</label>
+						<input type="text" name="trainName" placeholder="Enter Train Name" class="form-control">
+					  </div>
+					  <div class="form-group">
+						<label for="destination">Destination</label>
+						<input type="text" name="destination" placeholder="Destination" class="form-control">
+					  </div>
+					  <div class="form-group">
+						<label for="firstTraintime">First Train Time (HH:mm - military time)</label>
+						<input type="text" name="firstTraintime" placeholder="Destination" class="form-control">
+					  </div>
+					  <div class="form-group">
+						<label for="frequency">Frequency(min)</label>
+						<input type="text" name="frequency" placeholder="Frequency" class="form-control">
+					  </div>
+					</form>
+
+					<button type="submit" Value ="Submit" class="btn btn-default">Submit</button>
+				</div>
+			</div>  <!-- end form panel -->
+			
+		</div>  <!-- col div -->
+	</div> <!-- row div -->
+</div> <!-- container div -->
