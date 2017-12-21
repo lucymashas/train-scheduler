@@ -7,10 +7,12 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-   <!-- jQuery -->
- <!--  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-  <script src="https://code.jquery.com/jquery.js"> </script>
-  <script type="text/javascript" src="databse.js"></script> -->
+  
+
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+ 
 <style>
 
 .jumbotron{
@@ -24,38 +26,41 @@
     color: white;
 
 }
+.header-site{
+   background: #000000 url(./assets/images/coverimb.jpg) 100% 100% no-repeat;
+}
 
 </style>
 </head>
-
+<body>
 
 <div class="container-fluid">
+
 	<div class="row">
 		<div class="col-md-12">
-			<div class="jumbotron">
-				<h2>
-					Train Scheduler
-				</h2>
-				<p>
-					All Aboard!! The Newark Express!!
-				</p>
+			<div class="jumbotron header-site">
+			   <h1>
+				Network RailRoad Express
+			  </h1>
 			</div> <!-- end Jumbotron -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title">
+					<p class="panel-title">
 						Current Train Schedule
-					</h3>
+					</p>
 				</div>
 
 				<div class="panel-body">
-					<table class="table table-striped">
+					<table class="table table-striped" id="trainscheduler">
 						<thead><tr>
 						<th>Train Name</th>
 						<th>Destination</th>
 						<th>Frequency (min)</th>
 						<th>Next Arrival</th>
 						<th>Minutes Away</th>
-						</thead></tr>
+						</tr></thead>
+						<tbody>
+						</tbody>
 					</table>
 				</div>
 
@@ -67,31 +72,36 @@
 						Add Train
 					</h3>
 				</div>
+				
 				<div class="panel-body">
-					
-					<form>
-					  <div class="form-group">
-						<label for="trainName">Train Name</label>
-						<input type="text" name="trainName" placeholder="Enter Train Name" class="form-control">
-					  </div>
-					  <div class="form-group">
-						<label for="destination">Destination</label>
-						<input type="text" name="destination" placeholder="Destination" class="form-control">
-					  </div>
-					  <div class="form-group">
-						<label for="firstTraintime">First Train Time (HH:mm - military time)</label>
-						<input type="text" name="firstTraintime" placeholder="Destination" class="form-control">
-					  </div>
-					  <div class="form-group">
-						<label for="frequency">Frequency(min)</label>
-						<input type="text" name="frequency" placeholder="Frequency" class="form-control">
-					  </div>
-					</form>
-
-					<button type="submit" Value ="Submit" class="btn btn-default">Submit</button>
+				  <form id="traindata">
+				  <div class="form-group">
+					<label for="trainName">Train Name</label>
+					<input type="text" class="form-control" placeholder="Enter Train Name" id="trainName">
+				  </div>
+				  <div class="form-group">
+					<label for="destination">Destination</label>
+					<input type="text" class="form-control" placeholder="Destination" id="destination">
+				  </div>
+				  <div class="form-group">
+					<label for="firstTraintime">First Train Time (HH:mm - military time)</label>
+					<input type="text" class="form-control" placeholder="Military Time" id="firstTraintime" >
+				  </div>
+				  <div class="form-group">
+					<label for="frequency">Frequency(min)</label>
+					<input type="text" class="form-control" placeholder="Frequency" id="frequency">
+				  </div>
+				  <button type="submit" class="btn btn-default" id="addTrain">Submit</button>
 				</div>
+				</form>
 			</div>  <!-- end form panel -->
 			
 		</div>  <!-- col div -->
 	</div> <!-- row div -->
 </div> <!-- container div -->
+<!-- JQuery link   -->
+<script src="https://code.jquery.com/jquery.js"> </script>
+ <!-- JavaScript -->
+    <script src="./assets/js/schedule.js"></script>
+</body>
+</html>
