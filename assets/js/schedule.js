@@ -11,7 +11,16 @@
   };
   firebase.initializeApp(config);
 
-var database = firebase.database();  
+var database = firebase.database(); 
+
+	function bootstrap_alert(message){
+		console.log(message);
+		var alertemplate =`<div class="alert alert-success alert-dismissable">
+    				<a href="#" class="close" data-dismiss="alert" aria-label="close" fade-in>×</a>
+   					<strong>Success! &nbsp;&nbsp;</strong>${message}
+ 				 	</div>`
+ 			$('#alert').append(alertemplate);
+        	} 
 
     
 	$("#addTrain").on("click",function(){
@@ -47,16 +56,13 @@ var database = firebase.database();
 		};
 
 	//upload train info to the database
-		database.ref().push(trainSchedule);
-
-		console.log(trainSchedule.train);
-		console.log(trainSchedule.destination);
-		console.log(trainSchedule.tFrequency);
-		console.log(trainSchedule.narrival);
-		console.log(trainSchedule.minAway);
-
+	   database.ref().push(trainSchedule);
+       bootstrap_alert("The train information has been added.");
 		//Clear textboxes
 		$("#traindata").trigger("reset");
+		
+    	
+
 	});
 
 

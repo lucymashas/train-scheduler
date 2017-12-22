@@ -5,32 +5,15 @@
   <meta charset="UTF-8">
   <title>Train Scheduler</title>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  
-
-  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-
-   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
- 
-<style>
-
-.jumbotron{
-	background-color:#3681DC;
-	color:#FBFDFE;
-	text-align:center;
-}
-.panel > .panel-heading {
-    background-image: none;
-    background-color: #3E6897;
-    color: white;
-
-}
-.header-site{
-   background: #000000 url(./assets/images/coverimb.jpg) 100% 100% no-repeat;
-}
-
-</style>
+  	<!-- Bootstrap CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  	 <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+  	 <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  	<!-- JQuery link   -->
+	<script src="https://code.jquery.com/jquery.js"> </script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 </head>
 <body>
 
@@ -72,7 +55,9 @@
 						Add Train
 					</h3>
 				</div>
-				
+
+				<div id="alert"></div>
+
 				<div class="panel-body">
 				  <form id="traindata">
 				  <div class="form-group">
@@ -99,8 +84,7 @@
 		</div>  <!-- col div -->
 	</div> <!-- row div -->
 </div> <!-- container div -->
-<!-- JQuery link   -->
-<script src="https://code.jquery.com/jquery.js"> </script>
+
  <!-- JavaScript -->
     <script src="./assets/js/schedule.js"></script>
 </body>

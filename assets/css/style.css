@@ -1,0 +1,17 @@
+.jumbotron{
+	background-color:#3681DC;
+	color:#FBFDFE;
+	text-align:center;
+}
+.panel > .panel-heading {
+    background-image: none;
+    background-color: #3E6897;
+    color: white;
+
+}
+.header-site{
+   background: #000000 url(../images/coverimb.jpg) 100% 100% no-repeat;
+}
+.alert-success{
+	margin-top:10px;
+}
