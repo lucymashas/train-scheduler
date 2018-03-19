@@ -8,4 +8,4 @@ Technology Stack:
 Database:  Google Firebase | Javascript | JQuery | Bootstrap | CSS
 
 Functionality: 
-
+Form drive to have the user enter the train name, destination, first train time and frequency using moment.js and javascript the next train arrival is caluculated based on the current time.  It will also display the minutes before the train arrives at the station.
